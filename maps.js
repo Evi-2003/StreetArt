@@ -4,7 +4,6 @@ var directionsRenderer = new google.maps.DirectionsRenderer();
 const { BICYCLING, TRANSIT } = google.maps.DirectionsTravelMode;
 
 function initMap() {
-    // Create a new map
     map = new google.maps.Map(document.getElementById("googleMaps"), {
         center: { lat: 52.3547418, lng: 4.8215607},
         zoom: 13,
@@ -215,10 +214,9 @@ function calcRoute() {
         }]
     };
 
-    // Pass the request to the directions service
+
     directionsService.route(request, function (result, status) {
         if (status == "OK") {
-            // Update the directions renderer with the new route
             directionsRenderer.setDirections(result);
         }
     });
