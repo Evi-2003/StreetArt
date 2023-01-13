@@ -181,3 +181,13 @@ label {
     font-size: 2.2em;
     color: #1c1c1c;
 }
+.review main textarea{
+    border-radius: 5px;
+    box-shadow: #1c1c1c 0px 0px 6px;
+    height: 40vh;
+    width: 80%;
+    margin:15px;
+}
+.review main input, .review main button{
+    margin-left:15px;
+}
