@@ -1,74 +1,118 @@
 @font-face {
-    font-family: MilicoSans;
-    src: url("../fonts/MilicoSans.otf") format("opentype");
+    font-family: HelveticaNeue;
+    src: url("../fonts/HelveticaNeue.otf") format("opentype");
 }
 
 @font-face {
-    font-family: MintSansBold;
+    font-family: Poppins-Bold;
     font-weight: bold;
-    src: url("../fonts/MintSansBold.otf") format("opentype");
+    src: url("../fonts/Poppins-Bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: MintSansExtraLight;
-    font-weight: light;
-    src: url("../fonts/MintSansExtraLight.otf") format("opentype");
+    font-family: Poppins-SemiBold;
+    font-weight: 600;
+    src: url("../fonts/Poppins-SemiBold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: MintSansRegular;
+    font-family: Poppins-Medium;
     font-weight: normal;
-    src: url("../fonts/MintSansRegular.otf") format("opentype");
+    src: url("../fonts/Poppins-Medium.otf") format("opentype");
 }
+
 body{
-    background: #ECECEC;
-    margin: 0px;
+    margin:0;
+    background: url(../Images/background.jpg);
+    background-size:cover;
+    animation: scrollen 100s infinite;
 }
-header{
-    background: #1c1c1c;
-    padding: 25px;
-    box-shadow: 0 5px 0px #8dc0df;
+
+header section,footer{
+    box-shadow: 0px 0px 5px #1c1c1c;
+    text-align: left;
+    clear: both;
+    background-color: #8da5fe;
+    align-items: center;
+    display: flex;
+    padding: 0.5em;
+    width: fit-content;
 }
-header img{
+footer{
+    font-family: 'Poppins-Medium', sans-serif;
+    color: black;
+    font-size: 0.9em;
+    text-align: center;
+    align-items: center;
     width: 100%;
-    height: 30vw;
+    padding: 1em;
+    margin-top:2.9em;
+}
+footer img{
+    width: 4.5vw;
+    margin-right: 10px;
+}
+footer a{
+    width: 45%;
+}
+header a:nth-of-type(1), header a:nth-of-type(1) img{
+    text-align: center;
+    width: 100%;
     object-fit: contain;
 }
+header a:nth-of-type(2), header a:nth-of-type(2) img{
+    text-align: center;
+    width: 45%;
+}
+header i{
+    color: #1c1c1c;
+    font-size: 13vw;
+
+}
 h1{
-    font-family: 'MintSansRegular', sans-serif;
-    font-size: 2.7em;
+    font-family: 'Poppins-Medium', sans-serif;
+    font-size: 1.7em;
     margin-bottom:0px;
     margin-top: 5px;
     color: #1c1c1c;
     padding-left:15px;
     padding-top:15px;
 }
+h2{
+    font-family: 'Poppins-Medium', sans-serif;
+    font-size: 1em;
+    color: #1c1c1c;
+    padding-left:15px;
+    margin-top: -0.5em;
+}
 p{
-    font-family: 'MilicoExtraLight', sans-serif;
-    font-size: 1.3em;
+    font-family: 'Poppins-Medium', sans-serif;
+    font-size: 1em;
     margin-top: 3px;
     color: #1c1c1c;
     padding-left:15px
 }
-button{
-    font-family: 'MintSansRegular', sans-serif;
-    font-size: 1.3em;
+.home main div{overflow: hidden;}
+.home main div img{
+    width: 115vw;
+    height: 90vw;
+    position: fixed;
+    z-index: -1;
+    margin-top: -150px;
+    margin-left: -50px;
+}
+
+.home main h1, .home main p{
     color: white;
-    border-radius: 6px;
-    border:none;
-    background: #8dc0df;
-    height: 2em;
-    width: 50vw;
-    box-shadow: black 0px 0px 4px;
-    margin:10px;
 }
 /* Checkboxes maken bij foto's om de route te kunnen bepalen */
 ul{
     list-style-type: none;
     margin: 0;
     padding:0;
+    padding-left:10px;
     display: flex;
-    overflow: scroll;
+    flex-wrap: wrap;
 }
 li{
     display: inline-flex;
@@ -78,9 +122,7 @@ input[type="checkbox"][id^="Streetart_"]{
 }
 
 label {
-    display: inline-flex;
     position: relative;
-    margin: 10px;
     cursor: pointer;
   }
   
@@ -91,7 +133,7 @@ label {
     border-radius: 50%;
     position: absolute;
     top: -5px;
-    left: -5px;
+    right: -5px;
     width: 25px;
     height: 25px;
     text-align: center;
@@ -101,8 +143,10 @@ label {
   }
   
   label img {
-    width: 50vw;
-    height: 50vw;
+    width: 40vw;
+    margin-top: 0px;
+    margin: 2vw;
+    height: 40vw;
     transition-duration: 0.1s;
     border-radius: 10px;
     box-shadow: #1c1c1c 0px 0px 6px;
@@ -110,7 +154,7 @@ label {
   
   :checked + label:before {
     content: "✓";
-    background-color: #8dc0df;
+    background-color: #8da5fe;
     transform: scale(1.3);
     z-index: 2;
   }
@@ -148,21 +192,29 @@ label {
 }
 .nav main img{
     width: 100%;
-    box-shadow: 15px 15px 15px #8dc0df;
+   
+}
+.nav main section h1,.nav main section p{
+    color:white;
 }
 .nav main section{
     animation: FadeIn 5s;
-    background-color: #8dc0df;
-    color: black;
-    height: fit-content;
-    padding: 25px;
+    height: 38vh;
+    padding: 35px;
+    margin-top:-12px;
+    background-image: url(../Images/brush.png);
+    background-size:cover;
+    background-size: 100%;
+    background-position:center;
+    overflow: visible;
 }
+
 @keyframes FadeIn{
     0%{
         margin-top: 200px;
     }
     100%{
-        margin-top: -15px;
+        margin-top: -12px;
     }
 }
 
@@ -174,22 +226,75 @@ label {
         content: "Arrived";
     }
 }
+.nav main h2:before{
+    font-size: 1.5em;
+    
+}
 .nav main h2:after{
     content: "Arrived";
     animation: TextChange 5s linear;
-    font-family: 'MintSansRegular', sans-serif;
-    font-size: 2.2em;
+    font-family: 'Poppins-Semibold', sans-serif;
+    font-size: 1.5em;
     color: #1c1c1c;
     margin-left:15px;
     margin-top:10px;
 }
+.review main{
+    margin:10px;  
+}
+.reviw main section{
+    text-align: left;
+    margin-left:100px;
+}
 .review main textarea{
+    font-family: 'Poppins-Medium', sans-serif;
     border-radius: 5px;
     box-shadow: #1c1c1c 0px 0px 6px;
     height: 40vh;
     width: 80%;
-    margin:15px;
+    margin:10px;
+    padding:10px;
 }
+
 .review main input, .review main button{
     margin-left:15px;
 }
+.nav main section article button a{
+    color:white;
+}
+button,.review main label{
+    box-shadow: #242a2f 0px 0px 5px;
+    font-family: 'Poppins-Semibold', sans-serif;
+    font-size: 1em;
+    color: white;
+    border-radius: 6px;
+    border:none;
+    background: #8da5fe;
+    min-height: 2em;
+    width: 60vw;
+    box-shadow: black 0px 0px 4px;
+    align-items: center;
+    text-align: center;
+    margin:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button:hover{
+    box-shadow: #242a2f 0px 0px 6px;
+}
+input[type="file"] {
+    display: none;
+}
+
+@keyframes scrollen {
+    100%{
+     background-position:0px -800px;
+   }
+ }
+
+
+ .nav main h2{
+    margin-top:10px;
+    font-size: 1.2em;
+ }
