@@ -1,300 +1,403 @@
 @font-face {
-    font-family: HelveticaNeue;
-    src: url("../fonts/HelveticaNeue.otf") format("opentype");
+  font-family: Poppins-Bold;
+  font-weight: bold;
+  src: url("../fonts/Poppins-Bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Poppins-Bold;
-    font-weight: bold;
-    src: url("../fonts/Poppins-Bold.otf") format("opentype");
+  font-family: Poppins-SemiBold;
+  font-weight: 600;
+  src: url("../fonts/Poppins-SemiBold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: Poppins-SemiBold;
-    font-weight: 600;
-    src: url("../fonts/Poppins-SemiBold.otf") format("opentype");
+  font-family: Poppins-Medium;
+  font-weight: normal;
+  src: url("../fonts/Poppins-Medium.otf") format("opentype");
+}
+html,
+body {
+  height: 100%;
 }
 
-@font-face {
-    font-family: Poppins-Medium;
-    font-weight: normal;
-    src: url("../fonts/Poppins-Medium.otf") format("opentype");
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background: url(../Images/background.jpg);
+  background-size: cover;
+  animation: scrollen 100s infinite;
+}
+main {
+  flex: 1 0 auto;
+}
+header nav,
+footer {
+  box-shadow: 0px 0px 5px #1c1c1c;
+  text-align: left;
+  clear: both;
+  background-color: #8da5fe;
+  align-items: center;
+  display: flex;
+  padding: 0.5em;
+  width: fit-content;
+}
+footer {
+  font-family: "Poppins-Medium", sans-serif;
+  color: white;
+  font-size: 0.7em;
+  height: 1em;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em;
+}
+footer p {
+  color: white;
+  width: 100%;
+  text-align: center;
 }
 
-body{
-    margin:0;
-    background: url(../Images/background.jpg);
-    background-size:cover;
-    animation: scrollen 100s infinite;
+header a:nth-of-type(1),
+header a:nth-of-type(1) img {
+  text-align: center;
+  width: 100%;
+  object-fit: contain;
+}
+header a:nth-of-type(2),
+header a:nth-of-type(2) img {
+  text-align: center;
+  width: 45%;
+}
+header i {
+  color: #1c1c1c;
+  font-size: 13vw;
+}
+h1 {
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 1.7em;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  color: #1c1c1c;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+h2 {
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 1em;
+  color: #1c1c1c;
+  padding-left: 15px;
+  margin-top: -0.5em;
+}
+p {
+  font-family: "Poppins-Medium", sans-serif;
+  font-size: 1em;
+  margin-top: 3px;
+  color: #1c1c1c;
+  padding-left: 15px;
+}
+.home main div {
+  overflow: hidden;
+}
+.home main div img {
+  width: 115vw;
+  height: 90vw;
+  position: fixed;
+  z-index: -1;
+  margin-top: -150px;
+  margin-left: -50px;
 }
 
-header section,footer{
-    box-shadow: 0px 0px 5px #1c1c1c;
-    text-align: left;
-    clear: both;
-    background-color: #8da5fe;
-    align-items: center;
-    display: flex;
-    padding: 0.5em;
-    width: fit-content;
-}
-footer{
-    font-family: 'Poppins-Medium', sans-serif;
-    color: black;
-    font-size: 0.9em;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    padding: 1em;
-    margin-top:2.9em;
-}
-footer img{
-    width: 4.5vw;
-    margin-right: 10px;
-}
-footer a{
-    width: 45%;
-}
-header a:nth-of-type(1), header a:nth-of-type(1) img{
-    text-align: center;
-    width: 100%;
-    object-fit: contain;
-}
-header a:nth-of-type(2), header a:nth-of-type(2) img{
-    text-align: center;
-    width: 45%;
-}
-header i{
-    color: #1c1c1c;
-    font-size: 13vw;
-
-}
-h1{
-    font-family: 'Poppins-Medium', sans-serif;
-    font-size: 1.7em;
-    margin-bottom:0px;
-    margin-top: 5px;
-    color: #1c1c1c;
-    padding-left:15px;
-    padding-top:15px;
-}
-h2{
-    font-family: 'Poppins-Medium', sans-serif;
-    font-size: 1em;
-    color: #1c1c1c;
-    padding-left:15px;
-    margin-top: -0.5em;
-}
-p{
-    font-family: 'Poppins-Medium', sans-serif;
-    font-size: 1em;
-    margin-top: 3px;
-    color: #1c1c1c;
-    padding-left:15px
-}
-.home main div{overflow: hidden;}
-.home main div img{
-    width: 115vw;
-    height: 90vw;
-    position: fixed;
-    z-index: -1;
-    margin-top: -150px;
-    margin-left: -50px;
-}
-
-.home main h1, .home main p{
-    color: white;
+.home main h1,
+.home main p {
+  color: white;
 }
 /* Checkboxes maken bij foto's om de route te kunnen bepalen */
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding:0;
-    padding-left:10px;
-    display: flex;
-    flex-wrap: wrap;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
-li{
-    display: inline-flex;
+li {
+  display: inline-flex;
 }
-input[type="checkbox"][id^="Streetart_"]{
-    display: none;
-}
-
-label {
-    position: relative;
-    cursor: pointer;
-  }
-  
-  label:before {
-    color: white;
-    content: " ";
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    line-height: 28px;
-    transition-duration: 0.4s;
-    transform: scale(0);
-  }
-  
-  label img {
-    width: 40vw;
-    margin-top: 0px;
-    margin: 2vw;
-    height: 40vw;
-    transition-duration: 0.1s;
-    border-radius: 10px;
-    box-shadow: #1c1c1c 0px 0px 6px;
-  }
-  
-  :checked + label:before {
-    content: "✓";
-    background-color: #8da5fe;
-    transform: scale(1.3);
-    z-index: 2;
-  }
-
-  :checked + label img {
-    transform: scale(0.95);
-    box-shadow: 0 0 15px #8dc0df;
-  }
-  a{
-    text-decoration: none;
-    color: white;
-  }
-
-
-  /* Route Pagina */
-.route main h1{
-    font-family: 'MintSansRegular', sans-serif;
-    font-size: 2.2em;
-    margin-bottom:0px;
-    margin-top: 5px;
-    color: #1c1c1c;
-}
-.route main h3{
-    font-family: 'MintSansRegular', sans-serif;
-    font-size: 1.4em;
-    margin:0;
-    padding:10px;
-    color: #1c1c1c;
-}
-.route main button a{
-    font-size:16px;
-}
-.route main button{
-    width: 90%;
-}
-.nav main img{
-    width: 100%;
-   
-}
-.nav main section h1,.nav main section p{
-    color:white;
-}
-.nav main section{
-    animation: FadeIn 5s;
-    height: 38vh;
-    padding: 35px;
-    margin-top:-12px;
-    background-image: url(../Images/brush.png);
-    background-size:cover;
-    background-size: 100%;
-    background-position:center;
-    overflow: visible;
+.home input[type="checkbox"][id^="Streetart_"] {
+  display: none;
 }
 
-@keyframes FadeIn{
-    0%{
-        margin-top: 200px;
-    }
-    100%{
-        margin-top: -12px;
-    }
+.home label {
+  position: relative;
+  cursor: pointer;
 }
 
-@keyframes TextChange{
-    0%{
-        content: "Turn left in 100m";
-    }
-    100%{
-        content: "Arrived";
-    }
+.home label:before {
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
 }
-.nav main h2:before{
-    font-size: 1.5em;
-    
+
+.home label img {
+  width: 40vw;
+  margin-top: 0px;
+  margin: 2vw;
+  height: 40vw;
+  transition-duration: 0.1s;
+  border-radius: 10px;
+  box-shadow: #1c1c1c 0px 0px 6px;
 }
-.nav main h2:after{
+
+.home :checked + label:before {
+  content: "✓";
+  background-color: #8da5fe;
+  transform: scale(1.3);
+  z-index: 2;
+}
+
+.home :checked + label img {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px #8dc0df;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Route Pagina */
+.route main h1 {
+  font-family: "MintSansRegular", sans-serif;
+  font-size: 2.2em;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  color: #1c1c1c;
+}
+.route main h3 {
+  font-family: "MintSansRegular", sans-serif;
+  font-size: 1.4em;
+  margin: 0;
+  padding: 10px;
+  color: #1c1c1c;
+}
+.route main button a {
+  font-size: 16px;
+}
+.route main button {
+  width: 90%;
+}
+.nav main img {
+  width: 100%;
+}
+.nav main section h1,
+.nav main section p {
+  color: white;
+}
+.nav main section {
+  animation: FadeIn 5s;
+  height: 38vh;
+  padding: 35px;
+  margin-top: -12px;
+  background-image: url(../Images/brush.png);
+  background-size: cover;
+  background-size: 100%;
+  background-position: center;
+  overflow: visible;
+}
+
+@keyframes FadeIn {
+  0% {
+    margin-top: 200px;
+  }
+  100% {
+    margin-top: -12px;
+  }
+}
+
+@keyframes TextChange {
+  0% {
+    content: "Turn left in 100m";
+  }
+  100% {
     content: "Arrived";
-    animation: TextChange 5s linear;
-    font-family: 'Poppins-Semibold', sans-serif;
-    font-size: 1.5em;
-    color: #1c1c1c;
-    margin-left:15px;
-    margin-top:10px;
+  }
 }
-.review main{
-    margin:10px;  
+.nav main h2:before {
+  font-size: 1.5em;
 }
-.reviw main section{
-    text-align: left;
-    margin-left:100px;
+.nav main h2:after {
+  content: "Arrived";
+  animation: TextChange 5s linear;
+  font-family: "Poppins-Semibold", sans-serif;
+  font-size: 1.5em;
+  color: #1c1c1c;
+  margin-left: 15px;
+  margin-top: 10px;
 }
-.review main textarea{
-    font-family: 'Poppins-Medium', sans-serif;
-    border-radius: 5px;
-    box-shadow: #1c1c1c 0px 0px 6px;
-    height: 40vh;
-    width: 80%;
-    margin:10px;
-    padding:10px;
+.review main {
+  margin: 10px;
+}
+.reviw main section {
+  text-align: left;
+  margin-left: 100px;
+}
+.review main textarea {
+  font-family: "Poppins-Medium", sans-serif;
+  border-radius: 5px;
+  box-shadow: #1c1c1c 0px 0px 6px;
+  height: 40vh;
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
 }
 
-.review main input, .review main button{
-    margin-left:15px;
+.review main input,
+.review main a {
+  margin-left: 15px;
 }
-.nav main section article button a{
-    color:white;
+.review main a:nth-of-type(1) {
+  width: 40%;
+  display: inline-flex;
 }
-button,.review main label{
-    box-shadow: #242a2f 0px 0px 5px;
-    font-family: 'Poppins-Semibold', sans-serif;
-    font-size: 1em;
-    color: white;
-    border-radius: 6px;
-    border:none;
-    background: #8da5fe;
-    min-height: 2em;
-    width: 60vw;
-    box-shadow: black 0px 0px 4px;
-    align-items: center;
-    text-align: center;
-    margin:10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.review main a:nth-of-type(2) {
+  background-color: #e08294;
+  width: 80%;
+  display: flex;
 }
-button:hover{
-    box-shadow: #242a2f 0px 0px 6px;
+.review main a:nth-of-type(3) {
+  background-color: #de4059;
+  width: 80%;
+  display: flex;
+}
+.nav main section article a {
+  color: white;
+}
+button,main a,
+.review main label {
+  box-shadow: #242a2f 0px 0px 5px;
+  font-family: "Poppins-Semibold", sans-serif;
+  font-size: 1em;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  background: #8da5fe;
+  min-height: 2em;
+  width: 45vw;
+  box-shadow: black 0px 0px 4px;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
+.review main label {
+  padding: 0.65em;
 }
 input[type="file"] {
-    display: none;
+  display: none;
 }
 
 @keyframes scrollen {
-    100%{
-     background-position:0px -800px;
-   }
- }
+  100% {
+    background-position: 0px -800px;
+  }
+}
+.nav main section article {
+  display: inline;
+}
+.nav main section article a:nth-of-type(1) {
+  width: 60%;
+  display: inline;
+}
+.nav main section article a:nth-of-type(2) {
+  background-color: #de4059;
+  width: 45%;
+  margin: 0;
+  display: inline;
+}
+.nav main section article a:nth-of-type(3) {
+  background-color: #e08294;
+  display: flex;
+  margin-top:1em;
+}
+.main section article a:hover {
+  box-shadow: #242a2f 0px 0px 12px;
+}
+.nav main h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
 
+.inputs {
+  margin: 0.7em;
+}
+.inputs input {
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.inputs input:nth-of-type(3) {
+  width: 80vw;
+}
+nav {
+  display: contents;
+}
+.account main div {
+  margin-top: 1em;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+}
+.account main div h1 {
+  width: 80%;
+  display: inline;
+}
+.account main div img {
+  width: 20%;
+  display: inline;
+}
 
- .nav main h2{
-    margin-top:10px;
-    font-size: 1.2em;
- }
+.activity article {
+  background: #b9c8f9;
+  color: #1c1c1c;
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 5px;
+  box-shadow: #1c1c1c 0px 0px 3px;
+  font-family: "Poppins-Medium", sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  color: #1c1c1c;
+}
+.activity article:hover {
+  box-shadow: #1c1c1c 0px 0px 6px;
+}
+
+.activity img {
+  width: 115vw;
+  height: 90vw;
+  position: fixed;
+  z-index: -1;
+  margin-top: -650px;
+  margin-left: 175px;
+  transform: rotate(40deg);
+}
+button:hover {
+  box-shadow: #242a2f 0px 0px 6px;
+}
+main a{
+    padding: 0.35em;
+    margin-left: 25px;
+}

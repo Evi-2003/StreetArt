@@ -11,23 +11,22 @@
 </head>
 <body class="route">
     <header>
-        <section>
-          <a href="index.html"><img src="Images/Logo.jpg"></a>
-          <a href="account.html"><img src="Images/profiel.svg"></a>
-       </section>
-      </header>
+        <nav>
+          <a href="index.html"><img src="Images/Logo.jpg" alt="Logo"></a>
+          <a href="account.html"><img src="Images/profiel.svg" alt="Profiel"></a>
+       </nav>
+    </header>
     <main>
         <h1>Plan your route</h1>
 
         <div id="googleMaps" style="width:100%;height:50vh;"></div>
         <h3 id="duration"></h3>
-        <button><a href="navigatie.html">Start Route</a></button>
+        <a href="navigatie.html">Start Route</a>
     
     </main>
     <footer>
-        <a href="tel:31640707077"><img src="Images/phone.svg">+31640707077</a>
-        <a href="email:info@streetart.nl"><img src="Images/envelop.png">info@streetart.nl</a>
-    </footer>
+        <p>©Copyright 2023 / Studentnummer 500900152</p>
+      </footer>
     <script src="maps.js" type="text/javascript"></script>
     <script>document.addEventListener('DOMContentLoaded', calcRoute());</script>
     <script>document.addEventListener('DOMContentLoaded', initMap());</script>
